@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | AMMAN456</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.skills{
+padding:120px 8%;
+min-height:100vh;
+background:transparent;
+}
+
+.skills-title{
+text-align:center;
+font-size:70px;
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#60A5FA,
+#3B82F6,
+#38BDF8);
+animation:glowTitle 3s infinite alternate;
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 20px rgba(59,130,246,.3),
+0 0 40px rgba(59,130,246,.2);
+
+animation:glowTitle 3s infinite alternate;
+}
+
+@keyframes glowTitle{
+
+from{
+filter:brightness(1);
+}
+
+to{
+filter:brightness(1.4);
+}
+
+}
+
+
+
+.skill-card{
+background:rgba(30,41,59,.75);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+margin-bottom:25px;
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+box-shadow:0 0 20px rgba(59,130,246,.12);
+}
+.skill-card{
+animation:fadeUp .7s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.skill-card:hover{
+transform:translateY(-10px) scale(1.02);
+
+box-shadow:
+0 0 20px rgba(59,130,246,.3),
+0 0 40px rgba(59,130,246,.2),
+0 0 60px rgba(59,130,246,.1);
+}
+.skill-btn{
+width:100%;
+padding:22px 25px;
+background:transparent;
+border:none;
+color:#60A5FA;
+font-size:24px;
+font-weight:700;
+text-align:left;
+cursor:pointer;
+transition:.4s;
+}
+
+.skill-btn:hover{
+background:rgba(59,130,246,.08);
+}
+.skill-btn{
+position:relative;
+overflow:hidden;
+}
+
+.skill-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.15),
+transparent);
+
+transition:.7s;
+}
+
+.skill-btn:hover::before{
+left:100%;
+}
+.skill-content{
+max-height:0;
+overflow:hidden;
+padding:0 25px;
+line-height:2;
+font-size:18px;
+color:#F8FAFC;
+background:rgba(255,255,255,.02);
+transition:all .5s ease;
+}
+
+.skill-content ul{
+padding-left:25px;
+}
+
+.skill-content li{
+margin-bottom:8px;
+color:#CBD5E1;
+transition:.3s;
+}
+
+.skill-content li:hover{
+color:#60A5FA;
+transform:translateX(5px);
+}
+.skill-content li::marker{
+color:#60A5FA;
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+.stats{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:50px;
+}
+
+.stat-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:20px;
+padding:20px;
+width:180px;
+text-align:center;
+transition:.4s;
+}
+
+.stat-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(59,130,246,.4);
+}
+
+.stat-card h4{
+font-size:36px;
+color:#60A5FA;
+margin-bottom:10px;
+}
+
+.stat-card p{
+color:white;
+}
+.stats{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:20px !important;
+    flex-wrap:wrap !important;
+    margin-bottom:60px !important;
+    width:100% !important;
+}
+
+.stat-card{
+    display:block !important;
+    width:180px !important;
+    min-height:120px !important;
+
+    background:rgba(255,255,255,.08) !important;
+    backdrop-filter:blur(12px) !important;
+
+    border:1px solid rgba(255,255,255,.1) !important;
+    border-radius:20px !important;
+
+    padding:20px !important;
+    text-align:center !important;
+
+    box-shadow:0 0 20px rgba(59,130,246,.2) !important;
+}
+
+.stat-card h4{
+    font-size:36px !important;
+    color:#60A5FA !important;
+    margin-bottom:10px !important;
+}
+
+.stat-card p{
+    color:#fff !important;
+    font-size:18px !important;
+}
+.stat-card p{
+color:#fff !important;
+font-size:18px !important;
+}
+
+/* AHI PASTE KARO */
+@media(max-width:768px){
+
+.skills-title{
+text-shadow:
+0 0 20px rgba(59,130,246,.4),
+0 0 40px rgba(59,130,246,.2);
+font-size:48px;
+}
+
+.skill-btn{
+font-size:20px;
+padding:18px;
+}
+
+.skill-content{
+font-size:16px;
+}
+
+.stat-card{
+width:150px;
+}
+
+}
+.progress-box{
+margin-bottom:50px;
+}
+
+.progress-box h3{
+color:#fff;
+margin:15px 0 8px;
+}
+
+.progress{
+height:12px;
+background:rgba(255,255,255,.1);
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress span{
+display:block;
+height:100%;
+background:linear-gradient(
+90deg,
+#60A5FA,
+#3B82F6);
+
+border-radius:20px;
+
+box-shadow:
+0 0 15px rgba(59,130,246,.6);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">MAHAMMADAMAN(DATA SCIENCE)</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="skills">
+
+<h1 class="skills-title">Technical Skills</h1>
+<div class="stats">
+
+    <div class="stat-card">
+        <h4>90%</h4>
+        <p>Python</p>
+    </div>
+
+    <div class="stat-card">
+        <h4>85%</h4>
+        <p>SQL</p>
+    </div>
+
+    <div class="stat-card">
+        <h4>80%</h4>
+        <p>Power BI</p>
+    </div>
+
+    <div class="stat-card">
+        <h4>85%</h4>
+        <p>Machine Learning</p>
+    </div>
+
+</div>
+<div class="skill-card">
+<button class="skill-btn">🛠 Tools & Technologies</button>
+<div class="skill-content">
+<ul>
+<li>Jupyter Notebook</li>
+<li>Google Colab</li>
+<li>VS Code</li>
+<li>PyCharm</li>
+<li>Anaconda</li>
+<li>Git</li>
+<li>GitHub</li>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>MongoDB</li>
+<li>Excel</li>
+<li>Power BI</li>
+<li>Tableau</li>
+<li>NumPy</li>
+<li>Pandas</li>
+<li>Matplotlib</li>
+<li>Seaborn</li>
+<li>Plotly</li>
+<li>Scikit-Learn</li>
+<li>TensorFlow</li>
+<li>Keras</li>
+<li>PyTorch</li>
+<li>OpenCV</li>
+<li>NLTK</li>
+<li>Streamlit</li>
+<li>Flask</li>
+<li>Docker</li>
+<li>Apache Spark</li>
+<li>Hadoop</li>
+<li>AWS Basics</li>
+<li>Google Cloud Basics</li>
+<li>Linux</li>
+<li>Windows</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">🐍 Python</button>
+<div class="skill-content">
+<ul>
+<li>Python Fundamentals</li>
+<li>Variables & Data Types</li>
+<li>Operators</li>
+<li>Conditional Statements</li>
+<li>Loops</li>
+<li>Functions</li>
+<li>OOP</li>
+<li>Exception Handling</li>
+<li>File Handling</li>
+<li>NumPy</li>
+<li>Pandas</li>
+<li>Matplotlib</li>
+<li>Seaborn</li>
+<li>Plotly</li>
+<li>Scikit-Learn</li>
+<li>TensorFlow</li>
+<li>Keras</li>
+<li>PyTorch</li>
+<li>Web Scraping</li>
+<li>API Integration</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">🗄 SQL</button>
+<div class="skill-content">
+<ul>
+<li>DDL</li>
+<li>DML</li>
+<li>DCL</li>
+<li>TCL</li>
+<li>Joins</li>
+<li>Subqueries</li>
+<li>CTE</li>
+<li>Views</li>
+<li>Indexes</li>
+<li>Stored Procedures</li>
+<li>Triggers</li>
+<li>Window Functions</li>
+<li>Optimization</li>
+<li>Database Design</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">📊 Excel</button>
+<div class="skill-content">
+<ul>
+<li>Data Entry</li>
+<li>Data Cleaning</li>
+<li>Data Validation</li>
+<li>Conditional Formatting</li>
+<li>Sort & Filter</li>
+<li>Remove Duplicates</li>
+<li>Text to Columns</li>
+<li>Flash Fill</li>
+<li>Named Ranges</li>
+<li>Data Tables</li>
+<li>Goal Seek</li>
+<li>Scenario Manager</li>
+<li>What-If Analysis</li>
+<li>VLOOKUP</li>
+<li>HLOOKUP</li>
+<li>XLOOKUP</li>
+<li>INDEX</li>
+<li>MATCH</li>
+<li>INDEX-MATCH</li>
+<li>IF Function</li>
+<li>IFS Function</li>
+<li>AND Function</li>
+<li>OR Function</li>
+<li>COUNT</li>
+<li>COUNTA</li>
+<li>COUNTIF</li>
+<li>COUNTIFS</li>
+<li>SUM</li>
+<li>SUMIF</li>
+<li>SUMIFS</li>
+<li>AVERAGE</li>
+<li>AVERAGEIF</li>
+<li>MIN</li>
+<li>MAX</li>
+<li>LEFT</li>
+<li>RIGHT</li>
+<li>MID</li>
+<li>LEN</li>
+<li>TRIM</li>
+<li>CONCAT</li>
+<li>TEXT</li>
+<li>DATE Functions</li>
+<li>TIME Functions</li>
+<li>Pivot Tables</li>
+<li>Pivot Charts</li>
+<li>Slicers</li>
+<li>Dashboards</li>
+<li>Charts & Graphs</li>
+<li>Power Query</li>
+<li>Power Pivot</li>
+<li>Macros</li>
+<li>VBA Basics</li>
+<li>Data Analysis</li>
+<li>Forecasting</li>
+<li>Statistical Analysis</li>
+<li>Financial Functions</li>
+<li>KPI Reporting</li>
+<li>Interactive Dashboards</li>
+<li>Business Reporting</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">📈 Power BI</button>
+<div class="skill-content">
+<ul>
+<li>Power Query</li>
+<li>Data Modeling</li>
+<li>DAX</li>
+<li>Measures</li>
+<li>Calculated Columns</li>
+<li>KPIs</li>
+<li>Relationships</li>
+<li>Drill Through</li>
+<li>Bookmarks</li>
+<li>Dashboard Design</li>
+<li>Report Publishing</li>
+<li>Row Level Security</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">📉 Tableau</button>
+<div class="skill-content">
+<ul>
+<li>Data Connections</li>
+<li>Calculated Fields</li>
+<li>Filters</li>
+<li>Parameters</li>
+<li>Sets & Groups</li>
+<li>Dashboards</li>
+<li>Stories</li>
+<li>Maps</li>
+<li>Advanced Charts</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">🤖 Machine Learning</button>
+<div class="skill-content">
+<ul>
+<li>Linear Regression</li>
+<li>Logistic Regression</li>
+<li>KNN</li>
+<li>Naive Bayes</li>
+<li>Decision Tree</li>
+<li>Random Forest</li>
+<li>SVM</li>
+<li>XGBoost</li>
+<li>Clustering</li>
+<li>K-Means</li>
+<li>DBSCAN</li>
+<li>PCA</li>
+<li>Feature Engineering</li>
+<li>Model Evaluation</li>
+<li>Hyperparameter Tuning</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">🧠 Deep Learning</button>
+<div class="skill-content">
+<ul>
+<li>ANN</li>
+<li>CNN</li>
+<li>RNN</li>
+<li>LSTM</li>
+<li>GRU</li>
+<li>Transformers</li>
+<li>Transfer Learning</li>
+<li>Computer Vision</li>
+<li>NLP</li>
+<li>Image Classification</li>
+<li>Object Detection</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">⚡ Artificial Intelligence</button>
+<div class="skill-content">
+<ul>
+<li>AI Fundamentals</li>
+<li>Generative AI</li>
+<li>Prompt Engineering</li>
+<li>LLMs</li>
+<li>ChatGPT</li>
+<li>Gemini</li>
+<li>AI Agents</li>
+<li>RAG</li>
+<li>Vector Databases</li>
+<li>Computer Vision</li>
+<li>Natural Language Processing</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">📐 Mathematics</button>
+<div class="skill-content">
+<ul>
+<li>Linear Algebra</li>
+<li>Matrices</li>
+<li>Vectors</li>
+<li>Scalars</li>
+<li>Matrix Operations</li>
+<li>Eigenvalues & Eigenvectors</li>
+<li>Calculus</li>
+<li>Differentiation</li>
+<li>Integration</li>
+<li>Partial Derivatives</li>
+<li>Gradient Descent</li>
+<li>Optimization Techniques</li>
+<li>Limits & Continuity</li>
+<li>Functions & Graphs</li>
+<li>Trigonometry</li>
+<li>Coordinate Geometry</li>
+<li>Distance Formula</li>
+<li>Vector Spaces</li>
+<li>Norms</li>
+<li>Linear Transformations</li>
+</ul>
+</div>
+</div>
+
+<div class="skill-card">
+<button class="skill-btn">📊 Probability & Statistics</button>
+<div class="skill-content">
+<ul>
+<li>Mean</li>
+<li>Median</li>
+<li>Mode</li>
+<li>Range</li>
+<li>Variance</li>
+<li>Standard Deviation</li>
+<li>Percentiles</li>
+<li>Quartiles</li>
+<li>Probability</li>
+<li>Conditional Probability</li>
+<li>Bayes Theorem</li>
+<li>Permutations & Combinations</li>
+<li>Random Variables</li>
+<li>Expected Value</li>
+<li>Normal Distribution</li>
+<li>Binomial Distribution</li>
+<li>Poisson Distribution</li>
+<li>Sampling Techniques</li>
+<li>Central Limit Theorem</li>
+<li>Hypothesis Testing</li>
+<li>Confidence Intervals</li>
+<li>P-Value</li>
+<li>Z-Test</li>
+<li>T-Test</li>
+<li>Chi-Square Test</li>
+<li>ANOVA</li>
+<li>Correlation</li>
+<li>Covariance</li>
+<li>Regression Analysis</li>
+<li>A/B Testing</li>
+<li>Statistical Inference</li>
+<li>Data Visualization</li>
+</ul>
+</div>
+</div>
+
+</section>
+<script>
+
+const btns = document.querySelectorAll(".skill-btn");
+
+btns.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+const content = btn.nextElementSibling;
+
+document.querySelectorAll(".skill-content").forEach(item => {
+
+if(item !== content){
+item.style.maxHeight = null;
+item.style.padding = "0 25px";
+}
+
+});
+
+if(content.style.maxHeight){
+content.style.maxHeight = null;
+content.style.padding = "0 25px";
+}
+else{
+content.style.maxHeight = content.scrollHeight + "px";
+content.style.padding = "25px";
+}
+
+});
+
+});
+
+</script>

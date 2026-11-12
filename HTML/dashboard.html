@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aman | Portfolio CMS Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>AMAN456</h2>
+
+        <ul>
+            <li id="dashboardMenu" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li id="resumeMenu">
+                <i class="fa-solid fa-file-pdf"></i>
+                Resume
+            </li>
+
+            <li id="certificateMenu">
+                <i class="fa-solid fa-certificate"></i>
+                Certificates
+            </li>
+
+            <li id="projectMenu">
+                <i class="fa-solid fa-diagram-project"></i>
+                Projects
+            </li>
+
+            <li id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <h1>Welcome Aman 👋</h1>
+
+        <p>Manage your complete portfolio from here.</p>
+
+        <!-- Dashboard Section -->
+        <section id="dashboardSection">
+
+            <h2>Dashboard Overview</h2>
+            <p>Manage your resume, certificates and projects.</p>
+
+            <div class="cards">
+
+                <div class="card" id="resumeCard">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h2>Resume</h2>
+                    <p>Upload and manage your resume.</p>
+                </div>
+
+                <div class="card" id="certificateCard">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h2>Certificates</h2>
+                    <p>Add and manage your certificates.</p>
+                </div>
+
+                <div class="card" id="projectCard">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h2>Projects</h2>
+                    <p>Add and update your projects.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resumeSection" style="display:none;">
+
+            <h2>Resume Management</h2>
+
+            <input
+                type="text"
+                id="resumeTitle"
+                placeholder="Enter Resume Title">
+
+            <br><br>
+
+            <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf,application/pdf">
+
+            <br><br>
+
+            <button id="uploadResumeBtn">
+                Upload Resume
+            </button>
+
+            <hr>
+
+            <h3>Current Resume</h3>
+
+            <div id="resumeList">
+                No Resume Uploaded
+            </div>
+
+        </section>
+
+        <!-- Certificate Section -->
+        <section id="certificateSection" style="display:none;">
+
+            <h2>Certificate Management</h2>
+
+            <input
+                type="text"
+                id="certificateTitle"
+                placeholder="Enter Certificate Name">
+
+            <br><br>
+
+            <input
+                type="file"
+                id="certificateFile"
+                accept=".pdf,.jpg,.jpeg,.png">
+
+            <br><br>
+
+            <button id="uploadCertificateBtn">
+                Upload Certificate
+            </button>
+
+            <hr>
+
+            <h3>Uploaded Certificates</h3>
+
+            <div id="certificateList">
+                No Certificate Uploaded
+            </div>
+
+        </section>
+
+        <!-- Project Section -->
+        <section id="projectSection" style="display:none;">
+
+            <h2>Project Management</h2>
+
+            <div class="project-form">
+
+                <label for="projectImage">Project Image</label>
+
+                <input
+                    type="file"
+                    id="projectImage"
+                    accept=".jpg,.jpeg,.png,.webp">
+
+                <label for="projectTitle">Project Title</label>
+
+                <input
+                    type="text"
+                    id="projectTitle"
+                    placeholder="Enter Project Title">
+
+                <label for="projectDescription">Project Description</label>
+
+                <textarea
+                    id="projectDescription"
+                    rows="6"
+                    placeholder="Enter complete project description"></textarea>
+
+                <label for="projectTechnologies">Technologies Used</label>
+
+                <input
+                    type="text"
+                    id="projectTechnologies"
+                    placeholder="Example: Python, Excel, Power BI, SQL">
+
+                <label for="projectFiles">Project Files</label>
+
+                <input
+                    type="file"
+                    id="projectFiles"
+                    multiple
+                    accept=".py,.ipynb,.xlsx,.xls,.csv,.sql,.pbix,.doc,.docx,.pdf,.ppt,.pptx">
+
+                <small>You can select multiple project files.</small>
+
+                <label for="projectSummary">Project Summary</label>
+
+                <textarea
+                    id="projectSummary"
+                    rows="6"
+                    placeholder="Enter project summary"></textarea>
+
+                <label>Project Links</label>
+
+                <div id="projectLinksContainer">
+
+                    <div class="project-link-row">
+
+                        <input
+                            type="text"
+                            class="project-link-name"
+                            placeholder="Link Name e.g. GitHub Repository">
+
+                        <input
+                            type="url"
+                            class="project-link-url"
+                            placeholder="https://...">
+
+                        <button
+                            type="button"
+                            class="remove-project-link"
+                            title="Remove Link">
+                            🗑
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button type="button" id="addProjectLinkBtn">
+                    ➕ Add Another Link
+                </button>
+
+                <br><br>
+
+                <button type="button" id="uploadProjectBtn">
+                    ➕ Add Project
+                </button>
+
+            </div>
+
+            <hr>
+
+            <h3>My Projects</h3>
+
+            <div id="projectList">
+                No Project Added
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module">
+import { auth } from "./js/js/firebase.js";
+
+import {
+    onAuthStateChanged,
+    signOut
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
+
+const loginAllowed = sessionStorage.getItem("amanDashboardLogin") === "1";
+
+sessionStorage.removeItem("amanDashboardLogin");
+
+onAuthStateChanged(auth, async (user) => {
+
+    if (!loginAllowed || !user || user.email?.toLowerCase() !== "amanvahora227@gmail.com") {
+
+        await signOut(auth);
+        window.location.replace("admin.html");
+        return;
+    }
+
+    // Load dashboard scripts only after authentication
+    await import("./js/js/dashboard.js");
+    await import("./js/js/certificate.js");
+    await import("./js/js/project.js");
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aman | Admin Login</title>
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="css/admin.css">
+
+    <meta name="theme-color" content="#0b0b0f">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <div class="login-header">
+                <h1>MAHAMMADAMAN <span>VHORA</span></h1>
+                <p>DATA SCIENCE PORTFOLIO</p>
+                <h2>Admin Control Panel</h2>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="loginBtn">
+                    Login to Dashboard
+                </button>
+
+                <p id="message" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <div class="login-footer">
+                <p>Secure Admin Access</p>
+                <a href="index.html">← Back to Portfolio</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Firebase Login Script -->
+    <script type="module" src="js/js/auth.js"></script>
+
+</body>
+</html>
